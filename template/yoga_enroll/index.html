@@ -1,0 +1,87 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Yoga Class Registration Form.</title>
+
+  <style>
+    body {
+  font-family: "Raleway", sans-serif;
+  background-color: #e6ffe6;
+}
+h1 {
+  text-align: center;
+  margin: 20px auto;
+}
+form {
+  width: 70%;
+  margin: auto;
+}
+fieldset {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 0 5px #333;
+  background-color: #eee;
+}
+label {
+  display: block;
+  
+  margin-bottom: 5px;
+}
+input[type="text"],input[type="email"],select{
+  width: calc(100% - 20px);
+  height: 20px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+button {
+  width: 100%;
+  text-align: center;
+  margin: auto !important;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+    
+  </style>
+
+  
+  <script>
+    let error = {{error}};
+    if(error.length != 0){
+      alert(error); 
+    }
+       
+  </script>
+  
+  
+
+</head>
+
+<body>
+  <div id="event-registration">
+    <h1>Yoga Class Registration Form</h1><br>
+    
+    <form id="event-registration-form" method="POST" action="">
+      <!-- Form contents will go here -->
+      <fieldset>
+      {% csrf_token %}
+      {{form | crispy | linebreaks}}
+      
+      <button type="submit">Pay ₹500</button>
+        </fieldset>
+      </form>
+    
+  </div>
+</body>
+
+</html>
