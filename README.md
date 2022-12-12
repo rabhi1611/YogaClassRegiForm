@@ -1,30 +1,27 @@
-# Python on Replit
+   # -> Yoga Class Registration Form Web Application
+   
+   1) This application is based on Django Backend Web development framework.
+   
+   2) It basically uses sqlite database for saving data.
+   
+   3) It does some basic validations and if it's all right then, it saves the data to the database. 
+   
+   4) My approach was that I have created two html templates for index page and success page.
+   
+   5) Then I route those template to a specific url by writing my logic to the views.py file.
 
-This is a template to get you started with Python on Replit. It's ready to go so you can just hit run and start coding!
+   6) For creating form, i have used django ModelForm package which basically creates form with the help of columns of the table.
+   
+   7) I have used Student table for creating ModelForm in forms.py file itself. 
 
-## Running the repl
+   8) If all the details of the user is verified by the backend then, after pressing pay fees button, the server will redirect you to a success page which means form gets       successfully submitted. Otherwise, it will highlight errors. 
+   
+   ## -> Basic architecture of it's backend logic is shown below:
+   
+   
 
-1. Setup a new secret environment variable (the lock icon) where the key is `SECRET_KEY` and the value is
-   a randomly generated token of 32 bits of randomnese. To generate such a token type this into the shell and hit Enter:
-```
-python
-import secrets
-secrets.token_urlsafe(32)
-```
-2. Hit run!
 
-See this 1 minute video for a walkthrough: [https://www.loom.com/share/ecc4e738149f4d1db3bcff01758b3e71](https://www.loom.com/share/341b5574d12040fb9fcbbff150777f1c)
+![Screenshot (150)](https://user-images.githubusercontent.com/60568574/207021449-7f8ecb4b-0140-4826-b1ae-326a7f00aec8.png)
 
-## Installing packages
 
-To add packages to your repl, you can just import directly in the file you want to use the package in, and it will automatically be installed when you press the run button. Like below:
-```python
-import math
-import pandas as pd
-```
-
-You could also install packages by using the Replit packager interface in the left sidebar.
-
-## Help
-
-If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support)."# YogaClassRegiForm" 
+ ### Thank You!
